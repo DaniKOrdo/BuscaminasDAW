@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /contacto.html
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.buscaminasdk.com/sitemap.xml

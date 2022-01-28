@@ -1,0 +1,162 @@
+@import url('http://fonts.cdnfonts.com/css/common-pixel');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Common Pixel', sans-serif;                                         
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.center {
+    margin: auto;
+}
+
+.center-video iframe{
+    margin: 30px auto 30px auto;;
+    display: block;
+}
+
+.center h1 {
+    text-align: center;
+    margin: 25px;
+}
+
+.center p {
+    margin: 15px;
+    line-height: 30px;
+}
+
+header {
+    text-align: center;
+    background: #2f3045;
+    position: sticky;
+    width: 100% !important;
+    padding: 25px 0 25px;
+    font-size: 30pt;
+    color: white;
+    top: 0;
+    z-index: 1000;
+    -webkit-box-shadow: 0px 5px 18px 3px rgba(0,0,0,0.67); 
+    box-shadow: 0px 5px 18px 3px rgba(0,0,0,0.67);
+}
+
+header a {
+    text-decoration: none;
+    background-color: #2e2e43;
+    color: aliceblue;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-size: 20px;
+    border: 3px solid rgb(54, 63, 73);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+header a:active{
+    font-size: 30px;
+    transition: font-size 1s ease-in;
+}
+
+header a:hover{
+    background-color: #5C80BC;
+    transition: background-color 0.3s ease-in;
+}
+
+.jugar {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.activo {
+    border-color: #5C80BC;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 150px;
+    background-color: #181928;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+p {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.container {
+    width: 50%;
+    margin: 30px auto 30px auto;
+    padding: 10px;
+    background-color: #2e2e43;
+    border: 2px solid rgb(61, 61, 61);
+    border-radius: 10px;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.container form {
+    font-size: 25px;
+}
+
+.col-left {
+    width: 50%;
+    display: inline;
+}
+
+.col-right {
+    width: 30%;
+    display: inline;
+}
+
+/* Foto Quien Soy */
+.fotoPersonal {
+    width: 400px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-radius: 100px;
+}
+
+/* Formularios */
+input, select{
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-style: none;
+    background-color: #2e2e43;
+    color: rgb(194, 194, 194);
+}
+
+footer{
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    background: #2f3045;
+    border: 2px solid rgb(61, 61, 61);
+    padding: 20px;
+    bottom: 0;
+    position: absolute;
+  }
+
+footer img {
+    height: 20px;
+    margin: 10px 0 10px;
+  }
+

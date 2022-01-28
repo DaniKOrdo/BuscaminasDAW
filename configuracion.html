@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\style.css">
+    <title>Configuración - Buscaminas</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/ayuda.html">AYUDA</a>
+            <a href="/configuracion.html" class="activo">CONFIGURACION</a>
+            <a href="/index.html" class="jugar">JUGAR</a>
+            <a href="/quiensoy.html">QUIEN SOY</a>
+            <a href="/contacto.html">CONTACTO</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container center">
+            <h1>Configuracion</h1>
+
+            <!-- La configuración se modificará por JavaScript o por formulario -->
+
+            <form action="/index.html" method="post">
+
+                <label for="anchura">Anchura:</label><br>
+                <input type="number" id="anchura" name="anchura" value="10" required><br>
+
+                <label for="altura">Altura:</label><br>
+                <input type="number" id="altura" name="altura" value="10" required><br>
+
+                <label for="minas">Minas:</label><br>
+                <input type="number" id="minas" name="minas" value="10" required><br>
+
+                <label for="tema">Tema:</label><br>
+                <select name="tema" id="tema">
+                    <option value="clasico">Clasico</option>
+                    <option value="moderno">Moderno</option>
+                    <option value="oscuro">Oscuro</option>
+                    <option value="floral">floral</option>
+                    <option value="oceano">Océano</option>
+                </select><br>
+
+                <input type="checkbox" id="temporizador" name="temporizador">
+                <label for="temporizador"> Desactivar temporizador</label><br>
+
+                <input type="checkbox" id="ayuda" name="ayuda">
+                <label for="ayuda"> Modo ayuda</label><br>
+
+                <input type="submit" value="Guardar Configuracion">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social">
+            <p>
+                Redes Sociales
+            </p>
+            <div>
+                <a href="https://www.linkedin.com/in/danielordóñezgarcia/" target="_blank"><img src="img/linkedin.png" alt="linkedin"></a>
+                <a href="https://twitter.com/DaniKOrdo" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>
+                Creado por Daniel Ordóñez García ©2021
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

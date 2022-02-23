@@ -11,50 +11,22 @@ html {
   position: relative;
 }
 
-.col-1 {
-  width: 8.33%;
-}
-.col-2 {
-  width: 16.66%;
-}
-.col-3 {
-  width: 25%;
-}
-.col-4 {
-  width: 33.33%;
-}
-.col-5 {
-  width: 41.66%;
-}
-.col-6 {
-  width: 50%;
-}
-.col-7 {
-  width: 58.33%;
-}
-.col-8 {
-  width: 66.66%;
-}
-.col-9 {
-  width: 75%;
-}
-.col-10 {
-  width: 83.33%;
-}
-.col-11 {
-  width: 91.66%;
-}
-.col-12 {
-  width: 100%;
-}
-
 .center {
   margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.center p {
+  text-align: justify;
 }
 
 .center-video iframe {
   margin: 30px auto 30px auto;
-  display: block;
+  display: flex;
+  width: 100%;
+  max-width: 560px;
+  min-height: 315px;
 }
 
 .center h1 {
@@ -97,7 +69,7 @@ header a {
 }
 
 header a:active {
-  font-size: 30px;
+  font-size: 22px;
   transition: font-size 1s ease-in;
 }
 
@@ -125,15 +97,11 @@ header .logo {
   text-decoration: none;
 }
 
-/* menu */
-
 header .menu {
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
 }
-
-/* menu icon */
 
 header .menu-icon {
   cursor: pointer;
@@ -199,7 +167,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 810px) {
   header li {
     text-align: center;
     float: left;
@@ -220,6 +188,12 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   }
   header .logo {
     display: none;
+  }
+}
+
+@media (max-width: 809px) {
+  .container {
+
   }
 }
 
@@ -306,4 +280,40 @@ footer {
 footer img {
   height: 20px;
   margin: 10px 0 10px;
+}
+
+.animation{
+  margin: auto;
+  overflow: hidden;
+  max-width: 400px;
+  max-height: 220px;
+  text-align: center;
+
+  width: 100%;
+}
+
+.animation img{
+  position: relative;
+  right: 0px;
+  animation-name: bomba;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-end;
+}
+
+@keyframes bomba {
+  0% { right: 0px; }
+  7.14% { right: 400px; }
+  14.28% { right: 800px; }
+  21.42% { right: 1200px; }
+  28.56% { right: 1600px; }
+  35.7% { right: 2000px; }
+  42.84% { right: 2400px; }
+  49.98% { right: 2800px; }
+  57.12% { right: 3200px; }
+  64.26% { right: 3600px; }
+  71.4% { right: 4000px; }
+  78.54% { right: 4400px; }
+  85.68% { right: 4800px; }
+  92.82% { right: 5200px; }
 }

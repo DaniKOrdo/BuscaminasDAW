@@ -34,6 +34,10 @@ html {
   margin: 25px;
 }
 
+.center h2 {
+  margin-left: 5px;
+}
+
 .center p {
   margin: 15px;
   line-height: 30px;
@@ -218,7 +222,7 @@ p {
   flex-direction: column;
   width: 66.66%;
   margin: 30px auto 30px auto;
-  padding: 10px;
+  padding: 1.5%;
   background-color: #2e2e43;
   outline: 2px solid rgb(61, 61, 61);
   border-radius: 10px;
@@ -234,22 +238,110 @@ p {
   }
 }
 
+/*****************/
+/* Configuracion */
+/*****************/
+
 .config {
   display: flex;
+  flex-direction: row;
 }
 
 .config canvas {
+  float: right;
   width: 200px;
   height: 200px;
-  border: 2px solid red;
+  margin: 80px 30px;
+  border: 2px solid rgb(44, 44, 44);
+  background-color: #181928;
 }
 
 .col-50 {
-  width: 50%;
-  display: inline;
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Foto Quien Soy */
+.col-50 h1 {
+  text-align: left;
+}
+
+.canvas h1 {
+  text-align: right;
+}
+
+.config select {
+  font-size: 30px;
+ }
+
+.config option {
+  font-size: 25px;
+}
+
+.config input[type=number] {
+ font-size: 30px;
+ width: 100px;
+}
+
+.config input[type=submit] {
+  margin: 30px auto;
+  border: 2px solid #6c6c81;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.config input[type=submit]:hover {
+  background-color: #5c80bc;
+  transition: background-color 0.3s ease-in;
+}
+
+@media (max-width: 809px) { 
+  .col-50 {
+    width: 100%;
+    display: inline;
+  }
+
+  .config input[type=submit] {
+    margin:20px auto; display:block;
+
+  }
+
+  .canvas h1 {
+    text-align: left;
+  }
+
+  .config {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .config canvas {
+    width: 280px;
+    height: 280px;
+    margin: auto;
+  }
+
+  .canvas {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1280px) {
+  .config canvas {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+/*************/
+/* Quien soy */
+/*************/
+
 .fotoPersonal {
   width: 100%;
   padding: 20px 0 20px;

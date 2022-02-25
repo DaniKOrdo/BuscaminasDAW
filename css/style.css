@@ -191,12 +191,6 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   }
 }
 
-@media (max-width: 809px) {
-  .container {
-
-  }
-}
-
 .jugar {
   font-size: 30px;
   padding: 10px;
@@ -219,30 +213,39 @@ p {
 }
 
 .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 66.66%;
   margin: 30px auto 30px auto;
   padding: 10px;
   background-color: #2e2e43;
   outline: 2px solid rgb(61, 61, 61);
   border-radius: 10px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .container form {
   font-size: 25px;
 }
 
-.col-left {
-  width: 50%;
-  display: inline;
+@media (max-width: 809px) {
+  .container {
+    width: 90%;
+  }
 }
 
-.col-right {
-  width: 30%;
+.config {
+  display: flex;
+}
+
+.config canvas {
+  width: 200px;
+  height: 200px;
+  border: 2px solid red;
+}
+
+.col-50 {
+  width: 50%;
   display: inline;
 }
 
@@ -282,13 +285,17 @@ footer img {
   margin: 10px 0 10px;
 }
 
+/*************/
+/* Animacion */
+/*************/
+
 .animation{
   margin: auto;
   overflow: hidden;
   max-width: 400px;
   max-height: 220px;
   text-align: center;
-
+padding-bottom: 15px;
   width: 100%;
 }
 
@@ -316,4 +323,10 @@ footer img {
   78.54% { right: 4400px; }
   85.68% { right: 4800px; }
   92.82% { right: 5200px; }
+}
+
+@media (max-width: 600px) {
+  .animation img{
+    margin-left: -25%;
+  }
 }

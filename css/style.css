@@ -144,8 +144,6 @@ header .menu-icon .navicon:after {
   top: -5px;
 }
 
-/* menu btn */
-
 header .menu-btn {
   display: none;
 }
@@ -216,6 +214,10 @@ p {
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
+/*************/
+/* container */
+/*************/
+
 .container {
   display: flex;
   justify-content: center;
@@ -235,6 +237,66 @@ p {
 @media (max-width: 809px) {
   .container {
     width: 90%;
+  }
+}
+
+/*****************/
+/* Jugar / index */
+/*****************/
+
+.jugar canvas {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  border: 2px solid rgb(44, 44, 44);
+  background-color: #181928;
+}
+
+.marcador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 10px;
+}
+
+.marcador span {
+  margin: auto 15px 10px;
+  border: 2px solid rgb(44, 44, 44);
+  background-color: black;
+}
+
+#minas {
+  padding: 2px 10px;
+}
+
+#tiempo {
+  padding: 2px 10px;
+  color: red;
+}
+
+#caras {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/cara-happy.png);
+  background-size: cover;
+  background-color: gray;
+}
+
+#caras:hover {
+  background-image: url(../img/cara-win.png);
+}
+
+@media (max-width: 340px) {
+  .marcador span {
+    margin: auto 2px;
+  }
+}
+
+@media (max-width: 809px) {
+  .jugar canvas{
+    height: 500px;
   }
 }
 
@@ -343,7 +405,7 @@ p {
 /*************/
 
 .fotoPersonal {
-  width: 100%;
+  width: 50%;
   padding: 20px 0 20px;
   margin-left: auto;
   margin-right: auto;
@@ -351,7 +413,10 @@ p {
   border-radius: 100px;
 }
 
-/* Formularios */
+/**************/
+/* Formulario */
+/**************/
+
 input,
 select {
   margin-bottom: 20px;
@@ -387,7 +452,7 @@ footer img {
   max-width: 400px;
   max-height: 220px;
   text-align: center;
-padding-bottom: 15px;
+  padding-bottom: 15px;
   width: 100%;
 }
 

@@ -24,7 +24,7 @@
         </header>
 
     <main>
-        <div class="container">
+        <div class="container contacto">
             <h1>Formulario de contacto</h1>
             <!-- Pendiente de cambiar el action para poner un PHP ? -->
             <form action="/contacto.html" method="post">
@@ -38,10 +38,10 @@
                 </select><br>
                 
                 <label for="mensaje">Mensaje:</label><br>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea><br>
+                <textarea name="mensaje" id="mensaje" required></textarea><br>
 
                 <input type="checkbox" id="lopd" name="lopd" required>
-                <label for="lopd"> Acepto los Términos y Condiciones</label><br>
+                <label for="lopd" class="lopd"> Acepto los Términos y Condiciones</label><br>
 
                 <input type="submit" value="Enviar">
             </form>

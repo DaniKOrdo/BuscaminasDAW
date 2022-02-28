@@ -271,16 +271,16 @@ p {
   background-color: black;
 }
 
-#minas {
+.marcador #minas {
   padding: 2px 10px;
 }
 
-#tiempo {
+.marcador #tiempo {
   padding: 2px 10px;
   color: red;
 }
 
-#caras {
+.marcador #caras {
   width: 40px;
   height: 40px;
   background-image: url(../img/cara-happy.png);
@@ -288,11 +288,11 @@ p {
   background-color: gray;
 }
 
-#caras:hover {
+.marcador #caras:hover {
   background-image: url(../img/cara-win.png);
 }
 
-#caras:active {
+.marcador #caras:active {
   background-image: url(../img/cara-pendiente.png);
 }
 
@@ -342,16 +342,23 @@ p {
 }
 
 .config select {
-  font-size: 30px;
+  font-size:x-large;
  }
 
-.config option {
-  font-size: 25px;
+.config select {
+  background-color: #242430;
+  border: 2px solid #494957;
+  border-radius: 5px;
 }
 
 .config input[type=number] {
+  background-color: #242430;
  font-size: 30px;
  width: 100px;
+ background-color: #242430;
+ border: 1px solid #494957;
+ border-radius: 5px;
+ text-align: center;
 }
 
 .config input[type=submit] {
@@ -459,6 +466,63 @@ footer {
 footer img {
   height: 20px;
   margin: 10px 0 10px;
+}
+
+/************/
+/* Contacto */
+/************/
+.contacto h1 {
+  margin: 10px 10px 30px;
+}
+.contacto input {
+  margin: 10px auto 20px;
+
+}
+
+.contacto input[type=text] {
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin: 10px auto 20px;
+  border: 2px solid #6c6c81;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background-color: #6c6c81;
+}
+
+.contacto textarea {
+  font-family: "Lucida Console", "Courier New", monospace;
+  width: 400px;
+  height: 200px;
+  margin: 10px auto 20px;
+  border: 2px solid #6c6c81;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background-color: #6c6c81;
+}
+
+.contacto input[type=submit] {
+  margin: 30px auto;
+  border: 2px solid #6c6c81;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.contacto input[type=submit]:hover {
+  background-color: #5c80bc;
+  transition: background-color 0.3s ease-in;
+}
+
+.lopd {
+  font-size: small;
+}
+
+@media (max-width: 809px) {
+  .contacto textarea {
+    width: 95%;
+  }
 }
 
 /*************/

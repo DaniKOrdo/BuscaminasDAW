@@ -74,7 +74,11 @@ header a {
 
 header a:active {
   font-size: 22px;
-  transition: font-size 1s ease-in;
+  transition: font-size 2s ease-in;
+}
+
+header a.jugar:active {
+  font-size: 33px;
 }
 
 header a:hover {
@@ -288,6 +292,10 @@ p {
   background-image: url(../img/cara-win.png);
 }
 
+#caras:active {
+  background-image: url(../img/cara-pendiente.png);
+}
+
 @media (max-width: 340px) {
   .marcador span {
     margin: auto 2px;
@@ -411,6 +419,17 @@ p {
   margin-right: auto;
   display: flex;
   border-radius: 100px;
+}
+
+.underline {
+  text-decoration: none;
+  color: #52a7f1;
+  font-size: 20px;
+}
+
+.underline:hover {
+  text-decoration:underline;
+  color: #0074D9;
 }
 
 /**************/

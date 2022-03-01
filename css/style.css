@@ -65,7 +65,7 @@ p {
 
 .logo img {
   width: 32px;
-  margin-bottom:-10px;
+  margin-bottom: -10px;
 }
 
 header {
@@ -82,7 +82,7 @@ header {
   box-shadow: 0px 5px 18px 3px rgba(0, 0, 0, 0.67);
 }
 
-a.logo  {
+a.logo {
   border-radius: 10px;
 }
 
@@ -315,7 +315,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 }
 
 @media (max-width: 809px) {
-  .jugar canvas{
+  .jugar canvas {
     height: 500px;
   }
 }
@@ -354,8 +354,8 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 }
 
 .config select {
-  font-size:x-large;
- }
+  font-size: x-large;
+}
 
 .config select {
   background-color: #242430;
@@ -363,17 +363,17 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   border-radius: 5px;
 }
 
-.config input[type=number] {
+.config input[type="number"] {
   background-color: #242430;
- font-size: 30px;
- width: 100px;
- background-color: #242430;
- border: 1px solid #494957;
- border-radius: 5px;
- text-align: center;
+  font-size: 30px;
+  width: 100px;
+  background-color: #242430;
+  border: 1px solid #494957;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.config input[type=submit] {
+.config input[type="submit"] {
   margin: 30px auto;
   border: 2px solid #6c6c81;
   border-radius: 5px;
@@ -382,7 +382,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   cursor: pointer;
 }
 
-.config input[type=submit]:hover {
+.config input[type="submit"]:hover {
   background-color: #5c80bc;
   transition: background-color 0.3s ease-in;
 }
@@ -412,15 +412,15 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   filter: invert(50%);
 }
 
-@media (max-width: 809px) { 
+@media (max-width: 809px) {
   .col-50 {
     width: 100%;
     display: inline;
   }
 
-  .config input[type=submit] {
-    margin:20px auto; display:block;
-
+  .config input[type="submit"] {
+    margin: 20px auto;
+    display: block;
   }
 
   .canvas h1 {
@@ -457,7 +457,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 }
 
 @media (max-width: 340px) {
-  .config input[type=submit] {
+  .config input[type="submit"] {
     font-size: 18px;
   }
 }
@@ -482,8 +482,8 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 }
 
 .underline:hover {
-  text-decoration:underline;
-  color: #0074D9;
+  text-decoration: underline;
+  color: #0074d9;
 }
 
 /**************/
@@ -512,11 +512,10 @@ select {
 }
 .contacto input {
   margin: 10px auto 20px;
-
 }
 
-.contacto input[type=text], 
-.contacto input[type=email]{
+.contacto input[type="text"],
+.contacto input[type="email"] {
   font-family: "Lucida Console", "Courier New", monospace;
   margin: 10px auto 20px;
   width: 400px;
@@ -547,7 +546,7 @@ select {
   background-color: #6c6c81;
 }
 
-.contacto input[type=submit] {
+.contacto input[type="submit"] {
   margin: 30px auto;
   border: 2px solid #6c6c81;
   border-radius: 5px;
@@ -556,7 +555,7 @@ select {
   cursor: pointer;
 }
 
-.contacto input[type=submit]:hover {
+.contacto input[type="submit"]:hover {
   background-color: #5c80bc;
   transition: background-color 0.3s ease-in;
 }
@@ -570,8 +569,8 @@ select {
     width: 95%;
   }
 
-  .contacto input[type=text], 
-  .contacto input[type=email]{
+  .contacto input[type="text"],
+  .contacto input[type="email"] {
     width: 90%;
   }
 
@@ -584,7 +583,7 @@ select {
 /* Animacion */
 /*************/
 
-.animation{
+.animation {
   margin: auto;
   overflow: hidden;
   max-width: 400px;
@@ -594,7 +593,7 @@ select {
   width: 100%;
 }
 
-.animation img{
+.animation img {
   position: relative;
   right: 0px;
   animation-name: bomba;
@@ -620,19 +619,18 @@ select {
   92.82% { right: 5200px; }
 }
 
-
 @media (max-width: 425px) {
-  .animation img{
+  .animation img {
     margin-left: -2%;
   }
 }
 @media (max-width: 375px) {
-  .animation img{
+  .animation img {
     margin-left: -10%;
   }
 }
 @media (max-width: 320px) {
-  .animation img{
+  .animation img {
     margin-left: -20%;
   }
 }

@@ -11,6 +11,22 @@ html {
   position: relative;
 }
 
+body {
+  margin: 0;
+  margin-bottom: 150px;
+  background-color: #181928;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/**********/
+/* Center */
+/**********/
+
 .center {
   margin: auto;
   display: flex;
@@ -44,8 +60,13 @@ html {
 }
 
 /**********/
-/* header */
+/* Header */
 /**********/
+
+.logo img {
+  width: 32px;
+  margin-bottom: -10px;
+}
 
 header {
   text-align: center;
@@ -61,15 +82,17 @@ header {
   box-shadow: 0px 5px 18px 3px rgba(0, 0, 0, 0.67);
 }
 
+a.logo {
+  border-radius: 10px;
+}
+
 header a {
   text-decoration: none;
   background-color: #2e2e43;
   color: aliceblue;
-  /*font-family: Arial, Helvetica, sans-serif;*/
   font-size: 20px;
-  outline: 3px solid rgb(54, 63, 73);
-  border-radius: 10px;
-  padding: 5px;
+  outline: 2px solid rgb(54, 63, 73);
+  padding: 10px;
 }
 
 header a:active {
@@ -179,6 +202,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     float: left;
   }
   header li a {
+    border-radius: 10px;
     padding: 10px 20px;
     margin: 3px;
   }
@@ -204,18 +228,6 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 
 .activo {
   border-color: #5c80bc;
-}
-
-body {
-  margin: 0;
-  margin-bottom: 150px;
-  background-color: #181928;
-  color: #ffffff;
-  overflow-x: hidden;
-}
-
-p {
-  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 /*************/
@@ -303,7 +315,7 @@ p {
 }
 
 @media (max-width: 809px) {
-  .jugar canvas{
+  .jugar canvas {
     height: 500px;
   }
 }
@@ -342,26 +354,26 @@ p {
 }
 
 .config select {
-  font-size:x-large;
- }
+  font-size: x-large;
+}
 
 .config select {
   background-color: #242430;
-  border: 2px solid #494957;
+  border: 1px solid #494957;
   border-radius: 5px;
 }
 
-.config input[type=number] {
+.config input[type="number"] {
   background-color: #242430;
- font-size: 30px;
- width: 100px;
- background-color: #242430;
- border: 1px solid #494957;
- border-radius: 5px;
- text-align: center;
+  font-size: 30px;
+  width: 100px;
+  background-color: #242430;
+  border: 1px solid #494957;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.config input[type=submit] {
+.config input[type="submit"] {
   margin: 30px auto;
   border: 2px solid #6c6c81;
   border-radius: 5px;
@@ -370,20 +382,45 @@ p {
   cursor: pointer;
 }
 
-.config input[type=submit]:hover {
+.config input[type="submit"]:hover {
   background-color: #5c80bc;
   transition: background-color 0.3s ease-in;
 }
 
-@media (max-width: 809px) { 
+#tema {
+  height: 30px;
+}
+
+.less {
+  background-image: url(../img/minus-solid.svg);
+  filter: invert(100%);
+}
+.more {
+  background-image: url(../img/plus-solid.svg);
+  filter: invert(100%);
+}
+
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  mask-size: cover;
+  background-size: cover;
+}
+.icon:hover,
+.icon:focus {
+  filter: invert(50%);
+}
+
+@media (max-width: 809px) {
   .col-50 {
     width: 100%;
     display: inline;
   }
 
-  .config input[type=submit] {
-    margin:20px auto; display:block;
-
+  .config input[type="submit"] {
+    margin: 20px auto;
+    display: block;
   }
 
   .canvas h1 {
@@ -393,6 +430,10 @@ p {
   .config {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .config .col-50:nth-child(1) h1 {
+    font-size: 25px;
   }
 
   .config canvas {
@@ -412,6 +453,12 @@ p {
   .config canvas {
     width: 320px;
     height: 320px;
+  }
+}
+
+@media (max-width: 340px) {
+  .config input[type="submit"] {
+    font-size: 18px;
   }
 }
 
@@ -435,8 +482,8 @@ p {
 }
 
 .underline:hover {
-  text-decoration:underline;
-  color: #0074D9;
+  text-decoration: underline;
+  color: #0074d9;
 }
 
 /**************/
@@ -445,63 +492,61 @@ p {
 
 input,
 select {
-  margin-bottom: 20px;
+  margin: 10px 0 20px;
   font-size: 20px;
   border-style: none;
   background-color: #2e2e43;
   color: rgb(194, 194, 194);
 }
 
-footer {
-  height: 60px;
-  width: 100%;
-  text-align: center;
-  background: #2f3045;
-  outline: 2px solid rgb(61, 61, 61);
-  padding: 20px 0 20px;
-  bottom: 0;
-  position: absolute;
-}
-
-footer img {
-  height: 20px;
-  margin: 10px 0 10px;
-}
-
 /************/
 /* Contacto */
 /************/
+
+.contacto {
+  align-items: center;
+}
+
 .contacto h1 {
   margin: 10px 10px 30px;
 }
 .contacto input {
   margin: 10px auto 20px;
-
 }
 
-.contacto input[type=text] {
+.contacto input[type="text"],
+.contacto input[type="email"] {
   font-family: "Lucida Console", "Courier New", monospace;
+  margin: 10px auto 20px;
+  width: 400px;
+  border: 2px solid #6c6c81;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #6c6c81;
+}
+
+.contacto select {
   margin: 10px auto 20px;
   border: 2px solid #6c6c81;
   border-radius: 5px;
   padding: 5px;
-  color: white;
   background-color: #6c6c81;
 }
 
 .contacto textarea {
   font-family: "Lucida Console", "Courier New", monospace;
+  color: rgb(194, 194, 194);
+  font-size: 18px;
   width: 400px;
   height: 200px;
   margin: 10px auto 20px;
   border: 2px solid #6c6c81;
   border-radius: 5px;
   padding: 5px;
-  color: white;
   background-color: #6c6c81;
 }
 
-.contacto input[type=submit] {
+.contacto input[type="submit"] {
   margin: 30px auto;
   border: 2px solid #6c6c81;
   border-radius: 5px;
@@ -510,7 +555,7 @@ footer img {
   cursor: pointer;
 }
 
-.contacto input[type=submit]:hover {
+.contacto input[type="submit"]:hover {
   background-color: #5c80bc;
   transition: background-color 0.3s ease-in;
 }
@@ -523,13 +568,22 @@ footer img {
   .contacto textarea {
     width: 95%;
   }
+
+  .contacto input[type="text"],
+  .contacto input[type="email"] {
+    width: 90%;
+  }
+
+  .lopd {
+    font-size: x-small;
+  }
 }
 
 /*************/
 /* Animacion */
 /*************/
 
-.animation{
+.animation {
   margin: auto;
   overflow: hidden;
   max-width: 400px;
@@ -539,7 +593,7 @@ footer img {
   width: 100%;
 }
 
-.animation img{
+.animation img {
   position: relative;
   right: 0px;
   animation-name: bomba;
@@ -565,8 +619,43 @@ footer img {
   92.82% { right: 5200px; }
 }
 
-@media (max-width: 600px) {
-  .animation img{
-    margin-left: -25%;
+@media (max-width: 425px) {
+  .animation img {
+    margin-left: -2%;
   }
+}
+@media (max-width: 375px) {
+  .animation img {
+    margin-left: -10%;
+  }
+}
+@media (max-width: 320px) {
+  .animation img {
+    margin-left: -20%;
+  }
+}
+
+/**********/
+/* Footer */
+/**********/
+
+.copyright {
+  font-size: small;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0 10px;
+}
+
+footer {
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  background: #2f3045;
+  outline: 2px solid rgb(61, 61, 61);
+  padding: 20px 0 30px;
+  bottom: 0;
+  position: absolute;
 }

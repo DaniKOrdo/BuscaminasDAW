@@ -11,67 +11,69 @@
 
 <body>
     <header class="header">
-        <a href="" class="logo">Buscaminas</a>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo">
+            Buscaminas
+        </a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-            <ul class="menu">
-                <li><a href="/ayuda.html" class="activo">AYUDA</a></li>
-                <li><a href="/configuracion.html">CONFIGURACION</a></li>
-                <li><a href="/index.html" class="jugar">JUGAR</a></li>
-                <li><a href="/quiensoy.html">QUIEN SOY</a></li>
-                <li><a href="/contacto.html">CONTACTO</a></li>
-            </ul>
-        </header>
+        <ul class="menu">
+            <li><a href="/ayuda.html" class="activo">AYUDA</a></li>
+            <li><a href="/configuracion.html">CONFIGURACION</a></li>
+            <li><a href="/index.html" class="jugar">JUGAR</a></li>
+            <li><a href="/quiensoy.html">QUIEN SOY</a></li>
+            <li><a href="/contacto.html">CONTACTO</a></li>
+        </ul>
+    </header>
 
     <main>
         <div class="container center">
-            
 
-                <!-- Cuando tenga las configuraciones finales implementadas se agregarán a la ayuda -->
+            <h1>¿Como se juega?</h1>
 
-                <h1>¿Como se juega?</h1>
+            <h2>Objetivo:</h2>
+            <p>
+                El objetivo del juego es tratar de despejar un campo de minas sin
+                detonar ninguna de ellas.
+            </p>
 
-                <h2>Objetivo:</h2>
-                <p>
-                    El objetivo del juego es tratar de despejar un campo de minas sin 
-                    detonar ninguna de ellas.
-                </p>
+            <div class="animation">
+                <img src="./img/animacion-bomba.png" alt="">
+                (Animación con CSS)
+            </div>
 
-                <div class="animation">
-                    <img src="./img/animacion-bomba.png" alt="">
-                    (Animación con CSS)
-                </div>
+            <h2>Reglas:</h2>
+            <p>
+                Se trata de despejar todas las casillas del juego que no escondan una
+                mina. <br>
 
-                <h2>Reglas:</h2>
-                <p>
-                    Se trata de despejar todas las casillas del juego que no escondan una 
-                    mina. <br>
+                Hay algunas casillas que tienen un número tras despejarla, que indican
+                la cantidad de minas que hay en sus 8 casillas de alrededor. Por ejemplo,
+                si tiene el número 2, significa que hay 2 minas en las casillas de su
+                alrededor. Si se descubre una casilla sin número, significa que no hay
+                ninguna mina en su alrededor y se descubrirán automáticamente.<br>
 
-                    Hay algunas casillas que tienen un número tras despejarla, que indican 
-                    la cantidad de minas que hay en sus 8 casillas de alrededor. Por ejemplo, 
-                    si tiene el número 2, significa que hay 2 minas en las casillas de su 
-                    alrededor. Si se descubre una casilla sin número, significa que no hay 
-                    ninguna mina en su alrededor y se descubrirán automáticamente.<br>
+                Si la casilla elegida tiene una mina detrás, se pierde la partida.<br>
 
-                    Si la casilla elegida tiene una mina detrás, se pierde la partida.<br>
+                Con el click derecho se puede poner una bandera para indicar que se cree
+                que ahí hay una mina.<br>
 
-                    Con el click derecho se puede poner una bandera para indicar que se cree 
-                    que ahí hay una mina.<br>
+                También existe la posibilidad de poner un temporizador para aumentar la
+                dificultad, que en caso de que se acabe ese tiempo, se pierde la partida.
+            </p>
 
-                    También existe la posibilidad de poner un temporizador para aumentar la 
-                    dificultad, que en caso de que se acabe ese tiempo, se pierde la partida.
-                </p>
+            <h2>Video explicativo:</h2>
+            <p>
+                A continuación dejo un video explicativo de Youtube de como se juega.
+            </p>
 
-                <h2>Video explicativo:</h2>
-                <p>
-                    A continuación dejo un video explicativo de Youtube de como se juega.
-                </p>
+            <div class="center-video">
+                <iframe src="https://www.youtube.com/embed/Oes6IrpctJ0" title="YouTube buscaminas" frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
 
-                <div class="center-video">
-                    <iframe src="https://www.youtube.com/embed/Oes6IrpctJ0" title="YouTube buscaminas" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                 
-            
+
         </div>
     </main>
 
@@ -86,7 +88,9 @@
         </div>
 
         <div class="copyright">
-            <p>Creado por Daniel Ordóñez García ©2021</p>
+            <p>
+                &copy;2022 Daniel Ordóñez
+            </p>
         </div>
     </footer>
 </body>

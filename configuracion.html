@@ -11,17 +11,20 @@
 
 <body>
     <header class="header">
-        <a href="" class="logo">Buscaminas</a>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo">
+            Buscaminas
+        </a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-            <ul class="menu">
-                <li><a href="/ayuda.html">AYUDA</a></li>
-                <li><a href="/configuracion.html" class="activo">CONFIGURACION</a></li>
-                <li><a href="/index.html" class="jugar">JUGAR</a></li>
-                <li><a href="/quiensoy.html">QUIEN SOY</a></li>
-                <li><a href="/contacto.html">CONTACTO</a></li>
-            </ul>
-        </header>
+        <ul class="menu">
+            <li><a href="/ayuda.html">AYUDA</a></li>
+            <li><a href="/configuracion.html" class="activo">CONFIGURACION</a></li>
+            <li><a href="/index.html" class="jugar">JUGAR</a></li>
+            <li><a href="/quiensoy.html">QUIEN SOY</a></li>
+            <li><a href="/contacto.html">CONTACTO</a></li>
+        </ul>
+    </header>
 
     <main>
         <div class="container center config">
@@ -32,13 +35,19 @@
                 <form action="/index.html" method="post">
 
                     <label for="anchura">Anchura:</label><br>
-                    <input type="number" id="anchura" name="anchura" value="10" required><br>
+                    <span class="icon less"></span>
+                    <input type="number" id="anchura" name="anchura" value="10" required>
+                    <span class="icon more"></span><br>
 
                     <label for="altura">Altura:</label><br>
-                    <input type="number" id="altura" name="altura" value="10" required><br>
+                    <span class="icon less"></span>
+                    <input type="number" id="altura" name="altura" value="10" required>
+                    <span class="icon more"></span><br>
 
                     <label for="minas">Minas:</label><br>
-                    <input type="number" id="minas" name="minas" value="10" required><br>
+                    <span class="icon less"></span>
+                    <input type="number" id="minas" name="minas" value="10" required>
+                    <span class="icon more"></span><br>
 
                     <label for="tema">Tema:</label><br>
                     <select name="tema" id="tema">
@@ -64,15 +73,12 @@
                     <!-- Previsualización de los ajustes -->
                 </canvas>
             </div>
-            
+
         </div>
     </main>
 
     <footer>
         <div class="social">
-            <p>
-                Redes Sociales
-            </p>
             <div>
                 <a href="https://www.linkedin.com/in/danielordonezgarcia/" target="_blank"><img src="img/linkedin.png"
                         alt="linkedin"></a>
@@ -83,9 +89,10 @@
 
         <div class="copyright">
             <p>
-                Creado por Daniel Ordóñez García ©2021
+                &copy;2022 Daniel Ordóñez
             </p>
         </div>
     </footer>
 </body>
+
 </html>

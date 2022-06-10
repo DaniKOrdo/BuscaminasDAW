@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\style.css">
+    <script defer src="js/config.js"></script>
     <title>Configuración - Buscaminas</title>
 </head>
 
@@ -30,40 +31,49 @@
         <div class="container center config">
 
             <!-- La configuración se modificará por JavaScript -->
-            <div class="col-50">
+            <div class="col-50 config-div">
                 <h1>Configuracion</h1>
-                <form action="/index.html" method="post">
-
-                    <label for="anchura">Anchura:</label><br>
-                    <span class="icon less"></span>
-                    <input type="number" id="anchura" name="anchura" value="10" required>
-                    <span class="icon more"></span><br>
-
-                    <label for="altura">Altura:</label><br>
-                    <span class="icon less"></span>
-                    <input type="number" id="altura" name="altura" value="10" required>
-                    <span class="icon more"></span><br>
-
-                    <label for="minas">Minas:</label><br>
-                    <span class="icon less"></span>
-                    <input type="number" id="minas" name="minas" value="10" required>
-                    <span class="icon more"></span><br>
-
-                    <label for="tema">Tema:</label><br>
-                    <select name="tema" id="tema">
-                        <option value="clasico">Clasico</option>
-                        <option value="moderno">Moderno</option>
-                        <option value="floral">Floral</option>
-                        <option value="oceano">Oceano</option>
-                    </select><br>
-
-                    <input type="checkbox" id="temporizador" name="temporizador" checked>
-                    <label for="temporizador"> Temporizador</label><br>
-
-                    <input type="checkbox" id="ayuda" name="ayuda">
-                    <label for="ayuda"> Modo ayuda</label><br>
-
-                    <input type="submit" value="Guardar Configuracion">
+                <form class="form-conf">
+                    <div>
+                        <label for="anchura">Anchura:</label><br>
+                        <span class="icon less" id="lessAnchura"></span>
+                        <input type="number" id="anchura" name="anchura" value="10" required min="5">
+                        <span class="icon more" id="moreAnchura"></span><br>
+                    </div>
+                    
+                    <div>
+                        <label for="altura">Altura:</label><br>
+                        <span class="icon less" id="lessAltura"></span>
+                        <input type="number" id="altura" name="altura" value="8" required>
+                        <span class="icon more" id="moreAltura"></span><br>
+                    </div>
+                    
+                    <div>
+                        <label for="minas">Minas:</label><br>
+                        <span class="icon less" id="lessMina"></span>
+                        <input type="number" id="minas" name="minas" value="10" required>
+                        <span class="icon more" id="moreMina"></span><br>
+                    </div>
+                    
+                    <div>
+                        <label for="tema">Tema:</label><br>
+                        <select name="tema" id="tema">
+                            <option value="clasico">Clasico</option>
+                            <option value="moderno">Moderno</option>
+                            <option value="floral">Floral</option>
+                            <option value="oceano">Oceano</option>
+                        </select><br>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" id="temporizador" name="temporizador" checked>
+                        <label for="temporizador"> Temporizador</label><br>
+                    </div>
+                    
+                    <div>
+                        <input type="button" id="guardar" value="Guardar Configuracion">
+                        <h4 id="saveMessage" style="visibility: hidden">¡Configuracion guardada!</h4>
+                    </div>
                 </form>
             </div>
 

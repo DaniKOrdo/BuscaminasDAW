@@ -327,6 +327,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 .config {
   display: flex;
   flex-direction: row;
+  user-select: none; 
 }
 
 .config canvas {
@@ -373,18 +374,35 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   text-align: center;
 }
 
-.config input[type="submit"] {
+.config input#guardar{
+  user-select: none; 
   margin: 30px auto;
   border: 2px solid #6c6c81;
   border-radius: 5px;
   padding: 5px;
   color: white;
   cursor: pointer;
+  box-shadow: 0 9px #999;
 }
 
-.config input[type="submit"]:hover {
+.config input#guardar:hover {
   background-color: #5c80bc;
-  transition: background-color 0.3s ease-in;
+}
+
+.config input#guardar:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#saveMessage {
+  color: #46c24a;
+}
+
+.hide-message {
+  color: #46c24a;
+  opacity: 0;
+  transition: visibility 0s linear 3000ms, opacity 300ms;
 }
 
 #tema {
@@ -418,7 +436,19 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     display: inline;
   }
 
-  .config input[type="submit"] {
+  .config-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .form-conf {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .config input#guardar{
     margin: 20px auto;
     display: block;
   }
@@ -457,7 +487,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 }
 
 @media (max-width: 340px) {
-  .config input[type="submit"] {
+  .config input#guardar{
     font-size: 18px;
   }
 }

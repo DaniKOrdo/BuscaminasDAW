@@ -1,5 +1,4 @@
 //  LOCAL STORAGE INICIAL
-
 if (localStorage.getItem("anchura") === null) {
   localStorage.setItem("anchura", 31);
 }
@@ -44,7 +43,7 @@ function Cell(mine, flag, clear) {
   this.clear = clear;
 }
 
-const minaImg = document.getElementById("minaImg");
+
 
 const ctx = canvas.getContext("2d");
 const cellWidth = 41.5;
@@ -52,9 +51,14 @@ const cellHeight = 41.5;
 let board;
 
 let contadorSegundos = document.getElementById("tiempo");
+let contadorClear = 0;
+let alreadyWinGame = true;
 function draw() {
+  minasStorage = localStorage.getItem("minas");
+  contadorClear = 0;
   seconds = 0;
   hasPerdido = false;
+  alreadyWinGame = true;
   ctx.clearRect(0, 0, widthCanvas, heightCanvas);
 
   let horizontal = Number(localStorage.getItem("anchura"));
@@ -85,29 +89,39 @@ if (localStorage.getItem("temporizador") !== null) {
 
 let hasPerdido = false;
 
+// FUNCION AL HACER CLICK AL TABLERO
 canvas.addEventListener("mousedown", function (event) {
+ 
   contadorSegundos = document.getElementById("tiempo");
   if (hasPerdido) {
+    clearInterval(myInterval);
     this.removeEventListener("mousedown", myHandler);
   }
 
   // CONTADOR DE SEGUNDOS
   if (contador) {
-    setInterval(countUpTimer, 999);
-  }
-  let seconds = 0;
+    contadorSegundos.innerHTML = "000"
+    const myInterval = setInterval(countUpTimer, 999);
+    seconds = 0;
 
   function countUpTimer() {
     contador = false;
-    ++seconds;
-    if (seconds < 10) {
-      contadorSegundos.innerHTML = "00" + seconds;
-    } else if (seconds < 100) {
-      contadorSegundos.innerHTML = "0" + seconds;
-    } else {
-      contadorSegundos.innerHTML = seconds;
+    if (hasPerdido) {
+      seconds = 0;
+      } else {
+        ++seconds;
+      if (seconds < 10) {
+        contadorSegundos.innerHTML = "00" + seconds;
+      } else if (seconds < 100) {
+        contadorSegundos.innerHTML = "0" + seconds;
+      } else {
+        contadorSegundos.innerHTML = seconds;
+      }
     }
+    
   }
+  }
+  
 
   const boundingRect = canvas.getBoundingClientRect();
   const x = event.clientX - boundingRect.left;
@@ -117,14 +131,37 @@ canvas.addEventListener("mousedown", function (event) {
 
   if (event.button == 0) {
     // Left click
-
     clearCell(col, row);
   } else if (event.button == 2) {
     // Right click
-
     printFlag(col, row);
   }
-});
+
+  if(!hasPerdido) {
+    if(contadorClear + Number(localStorage.getItem("minas")) == anchura * altura) {
+      if(alreadyWinGame) {
+        winGame();
+      }
+    }
+  }
+
+  });
+
+function winGame() {
+  alreadyWinGame = false;
+  ctx.fillStyle = "rgba(10, 10, 10, 0.5)";
+  ctx.fillRect(0, 0, widthCanvas, heightCanvas);
+  canvas.removeEventListener("mousedown", function (event) {}, false);
+  ctx.font = "70px Common Pixel";
+  ctx.fillStyle = "lime";
+  ctx.textAlign = "center";
+  if(localStorage.getItem("temporizador") == "true") {
+    ctx.fillText("You Win in " + seconds + " seconds", widthCanvas / 2, heightCanvas / 2);
+  } else {
+    ctx.fillText("You Win", widthCanvas / 2, heightCanvas / 2);
+  }
+  contadorSegundos = document.getElementById("nada");
+}
 
 function getColorNumber(number) {
   switch (number) {
@@ -149,9 +186,14 @@ function getColorNumber(number) {
   }
 }
 
+let tematica = localStorage.getItem("tema");
+
+const minaImg = document.getElementById(tematica);
+
 function clearCell(col, row) {
   if (board[col][row].flag == false) {
     if (board[col][row].clear == false) {
+      contadorClear++;
       ctx.fillStyle = "#bdbdbd";
       ctx.fillRect(row * 40 + 1, col * 40 + 1, 38, 38);
       ctx.fillStyle = "rgb(255, 153, 0)";
@@ -256,24 +298,33 @@ function generateMines(vertical, horizontal) {
 }
 
 const gris = document.getElementById("gris");
+let temaBandera = localStorage.getItem("tema");
+
+const bandera = document.getElementById("flag-" + tematica);
 function printFlag(col, row) {
   if (board[col][row].clear == false) {
     if (board[col][row].flag == false) {
-      minasStorage--;
-      if (minasStorage < 10) {
-        document.getElementById("minas").innerHTML = "00" + minasStorage;
-      } else if (minasStorage < 100) {
-        document.getElementById("minas").innerHTML = "0" + minasStorage;
+      if(minasStorage > 0) {
+        minasStorage--;
+        if (minasStorage < 10) {
+          document.getElementById("minas").innerHTML = "00" + minasStorage;
+        } else if (minasStorage < 100) {
+          document.getElementById("minas").innerHTML = "0" + minasStorage;
+        }
       }
+
       board[col][row].flag = true;
-      ctx.drawImage(flag, row * 40 + 1, col * 40 + 1, 38, 38);
+      ctx.drawImage(bandera, row * 40 + 1, col * 40 + 1, 38, 38);
     } else {
-      minasStorage++;
-      if (minasStorage < 10) {
-        document.getElementById("minas").innerHTML = "00" + minasStorage;
-      } else if (minasStorage < 100) {
-        document.getElementById("minas").innerHTML = "0" + minasStorage;
+      if(minasStorage > 0) {
+        minasStorage++;
+        if (minasStorage < 10) {
+          document.getElementById("minas").innerHTML = "00" + minasStorage;
+        } else if (minasStorage < 100) {
+          document.getElementById("minas").innerHTML = "0" + minasStorage;
+        }
       }
+        
       board[col][row].flag = false;
       ctx.drawImage(gris, row * 40 + 1, col * 40 + 1, 38, 38);
     }
@@ -283,3 +334,5 @@ function printFlag(col, row) {
 document.addEventListener("contextmenu", function (event) {
   event.preventDefault();
 });
+
+
